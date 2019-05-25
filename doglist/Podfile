@@ -6,14 +6,15 @@ target 'doglist' do
   use_frameworks!
 
   # Pods for doglist
-  pod "PromiseKit"
+  pod 'PromiseKit'
   pod 'R.swift'
   pod 'IQKeyboardManagerSwift'
   pod 'SDWebImage'
 
   target 'doglistTests' do
     inherit! :search_paths
-    # Pods for testing
+    pod 'Cuckoo'
+    pod 'Nimble'
   end
 
 end

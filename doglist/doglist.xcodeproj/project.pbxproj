@@ -10,11 +10,13 @@
 		A8F0758D66E21090A861D60A /* Pods_doglistTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECE614C5DD21A6681E22818 /* Pods_doglistTests.framework */; };
 		DBAFE5BF75F0AAAE95C85696 /* Pods_doglist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C00A8BEB13C5A59A296A119 /* Pods_doglist.framework */; };
 		FD4348FA22992C9000AB6AEA /* DogPhotoListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4348F922992C9000AB6AEA /* DogPhotoListProvider.swift */; };
+		FD4348FD22998B9C00AB6AEA /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4348FC22998B9B00AB6AEA /* GeneratedMocks.swift */; };
+		FD43490322998C5500AB6AEA /* LoginInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD43490222998C5500AB6AEA /* LoginInteractorTests.swift */; };
+		FD43490722999A4600AB6AEA /* LoginPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD43490622999A4600AB6AEA /* LoginPresenterTests.swift */; };
 		FDCE95432298D47F00A82CFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCE95422298D47F00A82CFB /* AppDelegate.swift */; };
 		FDCE95482298D47F00A82CFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDCE95462298D47F00A82CFB /* Main.storyboard */; };
 		FDCE954A2298D48100A82CFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDCE95492298D48100A82CFB /* Assets.xcassets */; };
 		FDCE954D2298D48100A82CFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDCE954B2298D48100A82CFB /* LaunchScreen.storyboard */; };
-		FDCE95582298D48100A82CFB /* doglistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCE95572298D48100A82CFB /* doglistTests.swift */; };
 		FDCE95742298DB4400A82CFB /* RequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCE95732298DB4400A82CFB /* RequestProvider.swift */; };
 		FDCE95762298DB4C00A82CFB /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCE95752298DB4C00A82CFB /* ServiceProvider.swift */; };
 		FDCE95782298DB5500A82CFB /* DogErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCE95772298DB5500A82CFB /* DogErrors.swift */; };
@@ -63,6 +65,9 @@
 		7C00A8BEB13C5A59A296A119 /* Pods_doglist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_doglist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA407A290790BCB5BA066759 /* Pods-doglist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-doglist.release.xcconfig"; path = "Pods/Target Support Files/Pods-doglist/Pods-doglist.release.xcconfig"; sourceTree = "<group>"; };
 		FD4348F922992C9000AB6AEA /* DogPhotoListProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogPhotoListProvider.swift; sourceTree = "<group>"; };
+		FD4348FC22998B9B00AB6AEA /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
+		FD43490222998C5500AB6AEA /* LoginInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractorTests.swift; sourceTree = "<group>"; };
+		FD43490622999A4600AB6AEA /* LoginPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTests.swift; sourceTree = "<group>"; };
 		FDCE953F2298D47F00A82CFB /* doglist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = doglist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCE95422298D47F00A82CFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDCE95472298D47F00A82CFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -70,7 +75,6 @@
 		FDCE954C2298D48100A82CFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDCE954E2298D48100A82CFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDCE95532298D48100A82CFB /* doglistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = doglistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDCE95572298D48100A82CFB /* doglistTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doglistTests.swift; sourceTree = "<group>"; };
 		FDCE95592298D48100A82CFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDCE95732298DB4400A82CFB /* RequestProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProvider.swift; sourceTree = "<group>"; };
 		FDCE95752298DB4C00A82CFB /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
@@ -142,6 +146,39 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FD4348FE22998BC900AB6AEA /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				FD4348FF22998BCE00AB6AEA /* Login */,
+				FD43490022998BD900AB6AEA /* DogPhotoList */,
+				FD43490122998BDF00AB6AEA /* DogBreedList */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		FD4348FF22998BCE00AB6AEA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				FD43490222998C5500AB6AEA /* LoginInteractorTests.swift */,
+				FD43490622999A4600AB6AEA /* LoginPresenterTests.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		FD43490022998BD900AB6AEA /* DogPhotoList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DogPhotoList;
+			sourceTree = "<group>";
+		};
+		FD43490122998BDF00AB6AEA /* DogBreedList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DogBreedList;
+			sourceTree = "<group>";
+		};
 		FDCE95362298D47F00A82CFB = {
 			isa = PBXGroup;
 			children = (
@@ -177,7 +214,8 @@
 		FDCE95562298D48100A82CFB /* doglistTests */ = {
 			isa = PBXGroup;
 			children = (
-				FDCE95572298D48100A82CFB /* doglistTests.swift */,
+				FD4348FE22998BC900AB6AEA /* Scenes */,
+				FD4348FC22998B9B00AB6AEA /* GeneratedMocks.swift */,
 				FDCE95592298D48100A82CFB /* Info.plist */,
 			);
 			path = doglistTests;
@@ -324,6 +362,7 @@
 			buildConfigurationList = FDCE955C2298D48100A82CFB /* Build configuration list for PBXNativeTarget "doglist" */;
 			buildPhases = (
 				D074AF31AD06031607831EBB /* [CP] Check Pods Manifest.lock */,
+				FD4348FB22998A3C00AB6AEA /* Cuckoo */,
 				FDCE958F229904C000A82CFB /* R SWIFT */,
 				FDCE953B2298D47F00A82CFB /* Sources */,
 				FDCE953C2298D47F00A82CFB /* Frameworks */,
@@ -347,6 +386,7 @@
 				FDCE954F2298D48100A82CFB /* Sources */,
 				FDCE95502298D48100A82CFB /* Frameworks */,
 				FDCE95512298D48100A82CFB /* Resources */,
+				C182A4D8055FE58D8F9A3018 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -447,6 +487,30 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-doglist/Pods-doglist-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C182A4D8055FE58D8F9A3018 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-doglistTests/Pods-doglistTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Cuckoo/Cuckoo.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cuckoo.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-doglistTests/Pods-doglistTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D074AF31AD06031607831EBB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -490,6 +554,24 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		FD4348FB22998A3C00AB6AEA /* Cuckoo */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Cuckoo;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/Scenes/Login/LoginPresenter.swift\" \\\n\"${INPUT_DIR}/Scenes/Login/LoginWorker.swift\" \\\n\"${INPUT_DIR}/Scenes/Login/LoginInteractor.swift\" \\\n\"${INPUT_DIR}/Scenes/Login/LoginViewController.swift\" \\\n\"${INPUT_DIR}/Scenes/DogPhotoList/DogPhotoListWorker.swift\" \\\n\"${INPUT_DIR}/Scenes/DogPhotoList/DogPhotoListPresenter.swift\" \\\n\"${INPUT_DIR}/Scenes/DogPhotoList/DogPhotoListInteractor.swift\" \\\n\"${INPUT_DIR}/Scenes/DogPhotoList/DogPhotoListViewController.swift\" \\\n\"${INPUT_DIR}/Scenes/DogBreedList/DogBreedListViewController.swift\" \\\n\"${INPUT_DIR}/Scenes/DogBreedList/DogBreedListPresenter.swift\" \\\n\"${INPUT_DIR}/Scenes/DogBreedList/DogBreedsListInteractor.swift\"\n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
 		};
 		FDCE958F229904C000A82CFB /* R SWIFT */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -553,7 +635,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDCE95582298D48100A82CFB /* doglistTests.swift in Sources */,
+				FD43490722999A4600AB6AEA /* LoginPresenterTests.swift in Sources */,
+				FD43490322998C5500AB6AEA /* LoginInteractorTests.swift in Sources */,
+				FD4348FD22998B9C00AB6AEA /* GeneratedMocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
