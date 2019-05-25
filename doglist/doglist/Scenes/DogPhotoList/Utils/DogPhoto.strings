@@ -7,3 +7,4 @@
 */
 
 "title" = "Breed %@";
+"request_failure" = "Ocorreu algum erro ao realizar a requisição, tente novamente";

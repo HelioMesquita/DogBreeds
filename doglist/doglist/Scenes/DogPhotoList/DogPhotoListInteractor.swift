@@ -53,6 +53,7 @@ class DogPhotoListInteractor: DogPhotoListBusinessLogic, DogPhotoListDataStore {
   }
 
   func handleFailure(_ error: Error) {
+    presenter?.presentRequestFailureAlert()
   }
 
 }

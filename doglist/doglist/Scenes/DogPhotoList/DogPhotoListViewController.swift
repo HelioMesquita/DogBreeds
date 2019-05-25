@@ -14,6 +14,7 @@ import UIKit
 import SDWebImage
 
 protocol DogPhotoListDisplayLogic: class {
+  func showAlert(message: String)
   func showTitle(_ text: String)
   func reloadCollection()
 }
@@ -85,6 +86,17 @@ extension DogPhotoListViewController: DogPhotoListDisplayLogic {
 
   func reloadCollection() {
     collectionView.reloadData()
+  }
+
+  func showAlert(message: String) {
+    let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+    let action = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+    alertController.addAction(action)
+    let tryAgain = UIAlertAction(title: "Tentar Novamente", style: .default) { _ in
+      self.interactor?.load()
+    }
+    alertController.addAction(tryAgain)
+    present(alertController, animated: true, completion: nil)
   }
 
 }

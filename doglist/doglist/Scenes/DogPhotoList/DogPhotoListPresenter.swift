@@ -15,6 +15,7 @@ import UIKit
 protocol DogPhotoListPresentationLogic {
   func presentTitle(_ text: String?)
   func reloadCollection()
+  func presentRequestFailureAlert()
 }
 
 class DogPhotoListPresenter: DogPhotoListPresentationLogic {
@@ -27,6 +28,10 @@ class DogPhotoListPresenter: DogPhotoListPresentationLogic {
 
   func reloadCollection() {
     viewController?.reloadCollection()
+  }
+
+  func presentRequestFailureAlert() {
+    viewController?.showAlert(message: R.string.dogPhoto.request_failure())
   }
   
 }

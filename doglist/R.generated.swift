@@ -48,14 +48,21 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 2 localization tables.
   struct string {
-    /// This `R.string.dogPhoto` struct is generated, and contains static references to 1 localization keys.
+    /// This `R.string.dogPhoto` struct is generated, and contains static references to 2 localization keys.
     struct dogPhoto {
       /// Value: Breed %@
       static let title = Rswift.StringResource(key: "title", tableName: "DogPhoto", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Ocorreu algum erro ao realizar a requisição, tente novamente
+      static let request_failure = Rswift.StringResource(key: "request_failure", tableName: "DogPhoto", bundle: R.hostingBundle, locales: [], comment: nil)
       
       /// Value: Breed %@
       static func title(_ value1: String) -> String {
         return String(format: NSLocalizedString("title", tableName: "DogPhoto", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1)
+      }
+      
+      /// Value: Ocorreu algum erro ao realizar a requisição, tente novamente
+      static func request_failure(_: Void = ()) -> String {
+        return NSLocalizedString("request_failure", tableName: "DogPhoto", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}

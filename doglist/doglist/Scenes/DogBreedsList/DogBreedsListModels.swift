@@ -1,5 +1,5 @@
 //
-//  DogBreedListModels.swift
+//  DogBreedsListModels.swift
 //  doglist
 //
 //  Created by Hélio Mesquita on 25/05/19.
