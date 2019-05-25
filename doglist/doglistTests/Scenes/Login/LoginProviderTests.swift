@@ -51,4 +51,11 @@ class LoginProviderTests: XCTestCase {
     expect(self.subject.host).to(equal("api-iddog.idwall.co"))
   }
 
+  func testURLRequest() {
+    let urlRequest = subject.asURLRequest
+    expect(urlRequest.allHTTPHeaderFields?.count).to(equal(1))
+    expect(urlRequest.httpBody).toNot(beNil())
+    expect(urlRequest.url?.absoluteString).to(equal("https://api-iddog.idwall.co/signup"))
+  }
+
 }

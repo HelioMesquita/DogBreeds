@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: doglist/Scenes/DogBreedsList/DogBreedsListInteractor.swift at 2019-05-25 17:45:58 +0000
+// MARK: - Mocks generated from file: doglist/Scenes/DogBreedsList/DogBreedsListInteractor.swift at 2019-05-25 17:59:36 +0000
 
 //
 //  DogBreedListInteractor.swift
@@ -515,7 +515,7 @@ import UIKit
 }
 
 
-// MARK: - Mocks generated from file: doglist/Scenes/DogBreedsList/DogBreedsListPresenter.swift at 2019-05-25 17:45:58 +0000
+// MARK: - Mocks generated from file: doglist/Scenes/DogBreedsList/DogBreedsListPresenter.swift at 2019-05-25 17:59:36 +0000
 
 //
 //  DogBreedsListPresenter.swift
@@ -759,7 +759,7 @@ import UIKit
 }
 
 
-// MARK: - Mocks generated from file: doglist/Scenes/DogBreedsList/DogBreedsListViewController.swift at 2019-05-25 17:45:58 +0000
+// MARK: - Mocks generated from file: doglist/Scenes/DogBreedsList/DogBreedsListViewController.swift at 2019-05-25 17:59:36 +0000
 
 //
 //  DogBreedListViewController.swift
@@ -1091,7 +1091,7 @@ import UIKit
 }
 
 
-// MARK: - Mocks generated from file: doglist/Scenes/DogPhotoList/DogPhotoListInteractor.swift at 2019-05-25 17:45:58 +0000
+// MARK: - Mocks generated from file: doglist/Scenes/DogPhotoList/DogPhotoListInteractor.swift at 2019-05-25 17:59:36 +0000
 
 //
 //  DogPhotoListInteractor.swift
@@ -1712,7 +1712,7 @@ import UIKit
 }
 
 
-// MARK: - Mocks generated from file: doglist/Scenes/DogPhotoList/DogPhotoListPresenter.swift at 2019-05-25 17:45:58 +0000
+// MARK: - Mocks generated from file: doglist/Scenes/DogPhotoList/DogPhotoListPresenter.swift at 2019-05-25 17:59:36 +0000
 
 //
 //  DogPhotoListPresenter.swift
@@ -2076,7 +2076,7 @@ import UIKit
 }
 
 
-// MARK: - Mocks generated from file: doglist/Scenes/DogPhotoList/DogPhotoListViewController.swift at 2019-05-25 17:45:58 +0000
+// MARK: - Mocks generated from file: doglist/Scenes/DogPhotoList/DogPhotoListViewController.swift at 2019-05-25 17:59:36 +0000
 
 //
 //  DogPhotoListViewController.swift
@@ -2559,7 +2559,7 @@ import UIKit
 }
 
 
-// MARK: - Mocks generated from file: doglist/Scenes/DogPhotoList/DogPhotoListWorker.swift at 2019-05-25 17:45:58 +0000
+// MARK: - Mocks generated from file: doglist/Scenes/DogPhotoList/DogPhotoListWorker.swift at 2019-05-25 17:59:36 +0000
 
 //
 //  DogPhotoListWorker.swift
@@ -2669,7 +2669,7 @@ import UIKit
 }
 
 
-// MARK: - Mocks generated from file: doglist/Scenes/Login/LoginInteractor.swift at 2019-05-25 17:45:58 +0000
+// MARK: - Mocks generated from file: doglist/Scenes/Login/LoginInteractor.swift at 2019-05-25 17:59:36 +0000
 
 //
 //  LoginInteractor.swift
@@ -3152,7 +3152,7 @@ import UIKit
 }
 
 
-// MARK: - Mocks generated from file: doglist/Scenes/Login/LoginPresenter.swift at 2019-05-25 17:45:58 +0000
+// MARK: - Mocks generated from file: doglist/Scenes/Login/LoginPresenter.swift at 2019-05-25 17:59:36 +0000
 
 //
 //  LoginPresenter.swift
@@ -3696,7 +3696,7 @@ import UIKit
 }
 
 
-// MARK: - Mocks generated from file: doglist/Scenes/Login/LoginViewController.swift at 2019-05-25 17:45:58 +0000
+// MARK: - Mocks generated from file: doglist/Scenes/Login/LoginViewController.swift at 2019-05-25 17:59:36 +0000
 
 //
 //  LoginViewController.swift
@@ -4310,7 +4310,7 @@ import UIKit
 }
 
 
-// MARK: - Mocks generated from file: doglist/Scenes/Login/LoginWorker.swift at 2019-05-25 17:45:58 +0000
+// MARK: - Mocks generated from file: doglist/Scenes/Login/LoginWorker.swift at 2019-05-25 17:59:36 +0000
 
 //
 //  LoginWorker.swift

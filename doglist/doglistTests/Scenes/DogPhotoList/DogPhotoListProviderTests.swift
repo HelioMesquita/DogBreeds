@@ -53,5 +53,12 @@ class DogPhotoListProviderTests: XCTestCase {
   func testHost() {
     expect(self.subject.host).to(equal("api-iddog.idwall.co"))
   }
-}
 
+  func testURLRequest() {
+    let urlRequest = subject.asURLRequest
+    expect(urlRequest.allHTTPHeaderFields?.count).to(equal(2))
+    expect(urlRequest.httpBody).to(beNil())
+    expect(urlRequest.url?.absoluteString).to(equal("https://api-iddog.idwall.co/feed?category=husky"))
+  }
+
+}

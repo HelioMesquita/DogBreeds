@@ -63,7 +63,7 @@ extension LoginViewController: LoginDisplayLogic {
 
   func showAlert(message: String) {
     let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-    let action = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+    let action = UIAlertAction(title: R.string.general.ok(), style: .cancel, handler: nil)
     alertController.addAction(action)
     present(alertController, animated: true, completion: nil)
   }

@@ -90,9 +90,9 @@ extension DogPhotoListViewController: DogPhotoListDisplayLogic {
 
   func showAlert(message: String) {
     let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-    let action = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+    let action = UIAlertAction(title: R.string.general.ok(), style: .cancel, handler: nil)
     alertController.addAction(action)
-    let tryAgain = UIAlertAction(title: "Tentar Novamente", style: .default) { _ in
+    let tryAgain = UIAlertAction(title: R.string.general.tryAgain(), style: .default) { _ in
       self.interactor?.load()
     }
     alertController.addAction(tryAgain)

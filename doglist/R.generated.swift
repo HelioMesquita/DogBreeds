@@ -46,7 +46,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.string` struct is generated, and contains static references to 2 localization tables.
+  /// This `R.string` struct is generated, and contains static references to 3 localization tables.
   struct string {
     /// This `R.string.dogPhoto` struct is generated, and contains static references to 2 localization keys.
     struct dogPhoto {
@@ -63,6 +63,33 @@ struct R: Rswift.Validatable {
       /// Value: Ocorreu algum erro ao realizar a requisição, tente novamente
       static func request_failure(_: Void = ()) -> String {
         return NSLocalizedString("request_failure", tableName: "DogPhoto", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This `R.string.general` struct is generated, and contains static references to 3 localization keys.
+    struct general {
+      /// Value: Aconteceu um erro, tente novamente
+      static let someError = Rswift.StringResource(key: "someError", tableName: "general", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Ok
+      static let ok = Rswift.StringResource(key: "ok", tableName: "general", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Tentar novamente
+      static let tryAgain = Rswift.StringResource(key: "tryAgain", tableName: "general", bundle: R.hostingBundle, locales: [], comment: nil)
+      
+      /// Value: Aconteceu um erro, tente novamente
+      static func someError(_: Void = ()) -> String {
+        return NSLocalizedString("someError", tableName: "general", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Ok
+      static func ok(_: Void = ()) -> String {
+        return NSLocalizedString("ok", tableName: "general", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Tentar novamente
+      static func tryAgain(_: Void = ()) -> String {
+        return NSLocalizedString("tryAgain", tableName: "general", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}

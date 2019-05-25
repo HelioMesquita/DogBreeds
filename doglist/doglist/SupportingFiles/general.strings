@@ -1,0 +1,11 @@
+/* 
+  general.strings
+  doglist
+
+  Created by Hélio Mesquita on 25/05/19.
+  Copyright © 2019 Hélio Mesquita. All rights reserved.
+*/
+
+"ok" = "Ok";
+"tryAgain" = "Tentar novamente";
+"someError" = "Aconteceu um erro, tente novamente";

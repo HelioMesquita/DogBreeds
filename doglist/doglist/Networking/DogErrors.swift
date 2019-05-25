@@ -14,7 +14,7 @@ enum DogErrors: Error, LocalizedError {
   var localizedDescription: String {
     switch self {
     case .badRequest:
-      return "Aconteceu um erro, tente novamente"
+      return R.string.general.someError()
     }
   }
 }
