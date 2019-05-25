@@ -13,11 +13,15 @@
 import UIKit
 
 protocol DogBreedsListPresentationLogic {
-
+  func presentDogPhotoList()
 }
 
 class DogBreedsListPresenter: DogBreedsListPresentationLogic {
 
   weak var viewController: DogBreedsListDisplayLogic?
+
+  func presentDogPhotoList() {
+    viewController?.showDogPhotoList()
+  }
   
 }

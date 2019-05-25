@@ -18,12 +18,4 @@ enum DogBreedsList {
     case husky, hound, pug, labrador
   }
 
-  struct Request {
-  }
-
-  struct Response {
-  }
-
-  struct ViewModel {
-  }
 }

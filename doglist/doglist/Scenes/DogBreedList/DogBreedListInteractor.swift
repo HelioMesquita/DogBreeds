@@ -13,16 +13,31 @@
 import UIKit
 
 protocol DogBreedsListBusinessLogic {
-
+  var numberOfRows: Int { get }
+  func cellForRow(at index: Int) -> String
+  func didSelect(at index: Int)
 }
 
 protocol DogBreedsListDataStore {
-
+  var session: Login.Session? { get set }
 }
 
 class DogBreedsListInteractor: DogBreedsListBusinessLogic, DogBreedsListDataStore {
 
+  var numberOfRows: Int {
+    return DogBreedsList.Breeds.allCases.count
+  }
+
+  var session: Login.Session?
   var presenter: DogBreedsListPresentationLogic?
-  var worker: DogBreedsListWorker?
+
+  func cellForRow(at index: Int) -> String {
+    return DogBreedsList.Breeds.allCases[index].rawValue
+  }
+
+  func didSelect(at index: Int) {
+    session?.breed = DogBreedsList.Breeds.allCases[index]
+    presenter?.presentDogPhotoList()
+  }
 
 }

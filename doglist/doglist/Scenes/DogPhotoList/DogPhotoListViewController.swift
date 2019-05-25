@@ -52,12 +52,27 @@ class DogPhotoListViewController: UIViewController {
     super.viewDidLoad()
     collectionView.delegate = self
     collectionView.dataSource = self
+    configureFlowLayout()
+  }
 
+  func configureFlowLayout() {
+    let flow = collectionView.collectionViewLayout as? UICollectionViewFlowLayout
+    let itemSpacing: CGFloat = 3
+    let itemsInOneLine: CGFloat = 3
+    flow?.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    let width = UIScreen.main.bounds.size.width - itemSpacing * CGFloat(itemsInOneLine - 1)
+    flow?.itemSize = CGSize(width: floor(width/itemsInOneLine), height: width/itemsInOneLine)
+    flow?.minimumInteritemSpacing = 3
+    flow?.minimumLineSpacing = 3
   }
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     interactor?.load()
+  }
+
+  @IBAction func chooseBreed(_ sender: Any) {
+    router?.routeToChooseBreed()
   }
 
 }
@@ -85,21 +100,6 @@ extension DogPhotoListViewController: UICollectionViewDataSource, UICollectionVi
     let url = URL(string: interactor?.cellForRow(at: indexPath.row) ?? "")
     cell?.backgroundImageView.sd_setImage(with: url)
     return cell ?? UICollectionViewCell()
-  }
-
-  func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-
-    let padding: CGFloat =  50
-    let collectionViewSize = collectionView.frame.size.width - padding
-
-    return CGSize(width: collectionViewSize/2, height: collectionViewSize/2)
-  }
-
-  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    let padding: CGFloat =  50
-    let collectionViewSize = collectionView.frame.size.width - padding
-
-    return CGSize(width: collectionViewSize/2, height: collectionViewSize/2)
   }
 
 }

@@ -16,8 +16,10 @@ struct R: Rswift.Validatable {
     try intern.validate()
   }
   
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 2 reuse identifiers.
   struct reuseIdentifier {
+    /// Reuse identifier `breedCell`.
+    static let breedCell: Rswift.ReuseIdentifier<UIKit.UITableViewCell> = Rswift.ReuseIdentifier(identifier: "breedCell")
     /// Reuse identifier `photoCell`.
     static let photoCell: Rswift.ReuseIdentifier<DogCollectionViewCell> = Rswift.ReuseIdentifier(identifier: "photoCell")
     
@@ -144,10 +146,15 @@ struct _R: Rswift.Validatable {
     struct main: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
       typealias InitialController = LoginViewController
       
+      let breedList = StoryboardViewControllerResource<DogBreedsListViewController>(identifier: "breedList")
       let bundle = R.hostingBundle
       let login = StoryboardViewControllerResource<LoginViewController>(identifier: "login")
       let name = "Main"
       let photoList = StoryboardViewControllerResource<DogPhotoListViewController>(identifier: "photoList")
+      
+      func breedList(_: Void = ()) -> DogBreedsListViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: breedList)
+      }
       
       func login(_: Void = ()) -> LoginViewController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: login)
@@ -160,6 +167,7 @@ struct _R: Rswift.Validatable {
       static func validate() throws {
         if #available(iOS 11.0, *) {
         }
+        if _R.storyboard.main().breedList() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'breedList' could not be loaded from storyboard 'Main' as 'DogBreedsListViewController'.") }
         if _R.storyboard.main().login() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'login' could not be loaded from storyboard 'Main' as 'LoginViewController'.") }
         if _R.storyboard.main().photoList() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'photoList' could not be loaded from storyboard 'Main' as 'DogPhotoListViewController'.") }
       }

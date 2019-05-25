@@ -13,12 +13,25 @@
 import UIKit
 
 protocol DogBreedsListDisplayLogic: class {
+  func showDogPhotoList()
 }
 
 class DogBreedsListViewController: UIViewController {
 
   var interactor: DogBreedsListBusinessLogic?
   var router: (DogBreedsListRoutingLogic & DogBreedsListDataPassing)?
+
+  override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)   {
+    super.init(nibName: R.storyboard.main.breedList.identifier, bundle: nibBundleOrNil)
+    setup()
+  }
+
+  required init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
+    setup()
+  }
+
+  @IBOutlet weak var tableView: UITableView!
 
   private func setup() {
     let viewController = self
@@ -35,10 +48,35 @@ class DogBreedsListViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    tableView.delegate = self
+    tableView.dataSource = self
   }
 
 }
 
 extension DogBreedsListViewController: DogBreedsListDisplayLogic {
+
+  func showDogPhotoList() {
+    router?.routeToDogPhotoList()
+  }
+
+}
+
+extension DogBreedsListViewController: UITableViewDataSource, UITableViewDelegate {
+
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return interactor?.numberOfRows ?? 0
+  }
+
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: "breedCell", for: indexPath)
+    cell.textLabel?.text = interactor?.cellForRow(at: indexPath.row)
+    return cell
+  }
+
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    tableView.deselectRow(at: indexPath, animated: true)
+    interactor?.didSelect(at: indexPath.row)
+  }
 
 }

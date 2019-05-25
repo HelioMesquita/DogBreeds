@@ -37,7 +37,6 @@
 		FDCE95A1229916E300A82CFB /* DogPhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCE959B229916E300A82CFB /* DogPhotoListViewController.swift */; };
 		FDCE95A2229916E300A82CFB /* DogPhotoListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCE959C229916E300A82CFB /* DogPhotoListInteractor.swift */; };
 		FDCE95AE22991C4400A82CFB /* DogBreedListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCE95A822991C4400A82CFB /* DogBreedListPresenter.swift */; };
-		FDCE95AF22991C4400A82CFB /* DogBreedListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCE95A922991C4400A82CFB /* DogBreedListWorker.swift */; };
 		FDCE95B022991C4400A82CFB /* DogBreedListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCE95AA22991C4400A82CFB /* DogBreedListRouter.swift */; };
 		FDCE95B122991C4400A82CFB /* DogBreedListModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCE95AB22991C4400A82CFB /* DogBreedListModels.swift */; };
 		FDCE95B222991C4400A82CFB /* DogBreedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCE95AC22991C4400A82CFB /* DogBreedListViewController.swift */; };
@@ -95,7 +94,6 @@
 		FDCE959B229916E300A82CFB /* DogPhotoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogPhotoListViewController.swift; sourceTree = "<group>"; };
 		FDCE959C229916E300A82CFB /* DogPhotoListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogPhotoListInteractor.swift; sourceTree = "<group>"; };
 		FDCE95A822991C4400A82CFB /* DogBreedListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBreedListPresenter.swift; sourceTree = "<group>"; };
-		FDCE95A922991C4400A82CFB /* DogBreedListWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBreedListWorker.swift; sourceTree = "<group>"; };
 		FDCE95AA22991C4400A82CFB /* DogBreedListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBreedListRouter.swift; sourceTree = "<group>"; };
 		FDCE95AB22991C4400A82CFB /* DogBreedListModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBreedListModels.swift; sourceTree = "<group>"; };
 		FDCE95AC22991C4400A82CFB /* DogBreedListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBreedListViewController.swift; sourceTree = "<group>"; };
@@ -286,7 +284,6 @@
 			isa = PBXGroup;
 			children = (
 				FDCE95A822991C4400A82CFB /* DogBreedListPresenter.swift */,
-				FDCE95A922991C4400A82CFB /* DogBreedListWorker.swift */,
 				FDCE95AA22991C4400A82CFB /* DogBreedListRouter.swift */,
 				FDCE95AB22991C4400A82CFB /* DogBreedListModels.swift */,
 				FDCE95AC22991C4400A82CFB /* DogBreedListViewController.swift */,
@@ -508,7 +505,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/R.generated.swift",
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -527,7 +524,6 @@
 				FDCE95B022991C4400A82CFB /* DogBreedListRouter.swift in Sources */,
 				FDCE95832298DCE300A82CFB /* LoginViewController.swift in Sources */,
 				FDCE959F229916E300A82CFB /* DogPhotoListRouter.swift in Sources */,
-				FDCE95AF22991C4400A82CFB /* DogBreedListWorker.swift in Sources */,
 				FDCE958B2298E96400A82CFB /* Encodable.swift in Sources */,
 				FDCE95762298DB4C00A82CFB /* ServiceProvider.swift in Sources */,
 				FDCE95AE22991C4400A82CFB /* DogBreedListPresenter.swift in Sources */,

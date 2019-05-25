@@ -11,7 +11,6 @@ import PromiseKit
 
 class ServiceProvider {
 
-
   func execute<T: Decodable>(request: RequestProvider, parser: T.Type) -> Promise<T> {
     return Promise<T> { seal in
       URLSession.shared.dataTask(with: request.asURLRequest) { (data, response, _) in

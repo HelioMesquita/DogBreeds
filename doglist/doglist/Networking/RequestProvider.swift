@@ -56,8 +56,6 @@ extension RequestProvider {
       request.httpBody = data
     }
 
-//    print(request)
-//    print(String(bytes: request.httpBody!, encoding: .utf8))
     return request
   }
 

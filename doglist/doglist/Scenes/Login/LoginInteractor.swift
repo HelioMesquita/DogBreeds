@@ -38,8 +38,9 @@ class LoginInteractor: LoginBusinessLogic, LoginDataStore {
   }
 
   func validateEmail(_ text: String?) {
+    let trimmedEmail = text?.trimmingCharacters(in: .whitespacesAndNewlines)
     let regex: String = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
-    let isValid = NSPredicate(format: "SELF MATCHES %@", regex).evaluate(with: text)
+    let isValid = NSPredicate(format: "SELF MATCHES %@", regex).evaluate(with: trimmedEmail)
     if let text = text, isValid {
       performLogin(text)
     } else {

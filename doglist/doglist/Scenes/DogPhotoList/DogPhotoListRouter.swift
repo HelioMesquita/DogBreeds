@@ -13,6 +13,7 @@
 import UIKit
 
 @objc protocol DogPhotoListRoutingLogic {
+  func routeToChooseBreed()
 }
 
 protocol DogPhotoListDataPassing {
@@ -23,35 +24,16 @@ class DogPhotoListRouter: DogPhotoListRoutingLogic, DogPhotoListDataPassing {
 
   weak var viewController: DogPhotoListViewController?
   var dataStore: DogPhotoListDataStore?
-  
-  // MARK: Routing
-  
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
-  //{
-  //  if let segue = segue {
-  //    let destinationVC = segue.destination as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //  } else {
-  //    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-  //    let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //    navigateToSomewhere(source: viewController!, destination: destinationVC)
-  //  }
-  //}
 
-  // MARK: Navigation
+  func routeToChooseBreed(){
+    guard let destinationVC = R.storyboard.main.breedList() else { return }
+    var destinationDS = destinationVC.router!.dataStore!
+    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
+    viewController?.navigationController?.pushViewController(destinationVC, animated: true)
+  }
+
+  func passDataToSomewhere(source: DogPhotoListDataStore, destination: inout DogBreedsListDataStore) {
+    destination.session = source.session
+  }
   
-  //func navigateToSomewhere(source: DogPhotoListViewController, destination: SomewhereViewController)
-  //{
-  //  source.show(destination, sender: nil)
-  //}
-  
-  // MARK: Passing data
-  
-  //func passDataToSomewhere(source: DogPhotoListDataStore, destination: inout SomewhereDataStore)
-  //{
-  //  destination.name = source.name
-  //}
 }
