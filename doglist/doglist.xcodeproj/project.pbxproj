@@ -8,11 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		FDCE95432298D47F00A82CFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCE95422298D47F00A82CFB /* AppDelegate.swift */; };
-		FDCE95452298D47F00A82CFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCE95442298D47F00A82CFB /* ViewController.swift */; };
 		FDCE95482298D47F00A82CFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDCE95462298D47F00A82CFB /* Main.storyboard */; };
 		FDCE954A2298D48100A82CFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDCE95492298D48100A82CFB /* Assets.xcassets */; };
 		FDCE954D2298D48100A82CFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDCE954B2298D48100A82CFB /* LaunchScreen.storyboard */; };
 		FDCE95582298D48100A82CFB /* doglistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCE95572298D48100A82CFB /* doglistTests.swift */; };
+		FDCE95742298DB4400A82CFB /* RequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCE95732298DB4400A82CFB /* RequestProvider.swift */; };
+		FDCE95762298DB4C00A82CFB /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCE95752298DB4C00A82CFB /* ServiceProvider.swift */; };
+		FDCE95782298DB5500A82CFB /* DogErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCE95772298DB5500A82CFB /* DogErrors.swift */; };
+		FDCE957F2298DCE300A82CFB /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCE95792298DCE300A82CFB /* LoginPresenter.swift */; };
+		FDCE95802298DCE300A82CFB /* LoginWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCE957A2298DCE300A82CFB /* LoginWorker.swift */; };
+		FDCE95812298DCE300A82CFB /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCE957B2298DCE300A82CFB /* LoginRouter.swift */; };
+		FDCE95822298DCE300A82CFB /* LoginModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCE957C2298DCE300A82CFB /* LoginModels.swift */; };
+		FDCE95832298DCE300A82CFB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCE957D2298DCE300A82CFB /* LoginViewController.swift */; };
+		FDCE95842298DCE300A82CFB /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCE957E2298DCE300A82CFB /* LoginInteractor.swift */; };
+		FDCE95872298E0B400A82CFB /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCE95862298E0B400A82CFB /* Bundle.swift */; };
+		FDCE95892298E26B00A82CFB /* HttpVerb.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCE95882298E26B00A82CFB /* HttpVerb.swift */; };
+		FDCE958B2298E96400A82CFB /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCE958A2298E96400A82CFB /* Encodable.swift */; };
+		FDCE958E2298FE4B00A82CFB /* LoginProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCE958D2298FE4B00A82CFB /* LoginProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +40,6 @@
 /* Begin PBXFileReference section */
 		FDCE953F2298D47F00A82CFB /* doglist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = doglist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCE95422298D47F00A82CFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FDCE95442298D47F00A82CFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FDCE95472298D47F00A82CFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FDCE95492298D48100A82CFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDCE954C2298D48100A82CFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +47,19 @@
 		FDCE95532298D48100A82CFB /* doglistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = doglistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCE95572298D48100A82CFB /* doglistTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doglistTests.swift; sourceTree = "<group>"; };
 		FDCE95592298D48100A82CFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDCE95732298DB4400A82CFB /* RequestProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProvider.swift; sourceTree = "<group>"; };
+		FDCE95752298DB4C00A82CFB /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
+		FDCE95772298DB5500A82CFB /* DogErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogErrors.swift; sourceTree = "<group>"; };
+		FDCE95792298DCE300A82CFB /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		FDCE957A2298DCE300A82CFB /* LoginWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWorker.swift; sourceTree = "<group>"; };
+		FDCE957B2298DCE300A82CFB /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		FDCE957C2298DCE300A82CFB /* LoginModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModels.swift; sourceTree = "<group>"; };
+		FDCE957D2298DCE300A82CFB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FDCE957E2298DCE300A82CFB /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		FDCE95862298E0B400A82CFB /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		FDCE95882298E26B00A82CFB /* HttpVerb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpVerb.swift; sourceTree = "<group>"; };
+		FDCE958A2298E96400A82CFB /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
+		FDCE958D2298FE4B00A82CFB /* LoginProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +101,11 @@
 		FDCE95412298D47F00A82CFB /* doglist */ = {
 			isa = PBXGroup;
 			children = (
-				FDCE95422298D47F00A82CFB /* AppDelegate.swift */,
-				FDCE95442298D47F00A82CFB /* ViewController.swift */,
-				FDCE95462298D47F00A82CFB /* Main.storyboard */,
-				FDCE95492298D48100A82CFB /* Assets.xcassets */,
-				FDCE954B2298D48100A82CFB /* LaunchScreen.storyboard */,
-				FDCE954E2298D48100A82CFB /* Info.plist */,
+				FDCE95852298E0A700A82CFB /* Extensions */,
+				FDCE95642298D52D00A82CFB /* Scenes */,
+				FDCE95632298D52500A82CFB /* Networking */,
+				FDCE95652298D57000A82CFB /* Storyboard */,
+				FDCE95622298D51700A82CFB /* SupportingFiles */,
 			);
 			path = doglist;
 			sourceTree = "<group>";
@@ -94,6 +117,75 @@
 				FDCE95592298D48100A82CFB /* Info.plist */,
 			);
 			path = doglistTests;
+			sourceTree = "<group>";
+		};
+		FDCE95622298D51700A82CFB /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				FDCE954E2298D48100A82CFB /* Info.plist */,
+				FDCE95492298D48100A82CFB /* Assets.xcassets */,
+				FDCE95422298D47F00A82CFB /* AppDelegate.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		FDCE95632298D52500A82CFB /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				FDCE95732298DB4400A82CFB /* RequestProvider.swift */,
+				FDCE95752298DB4C00A82CFB /* ServiceProvider.swift */,
+				FDCE95772298DB5500A82CFB /* DogErrors.swift */,
+				FDCE95882298E26B00A82CFB /* HttpVerb.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		FDCE95642298D52D00A82CFB /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				FDCE95662298D58800A82CFB /* Login */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		FDCE95652298D57000A82CFB /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				FDCE95462298D47F00A82CFB /* Main.storyboard */,
+				FDCE954B2298D48100A82CFB /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		FDCE95662298D58800A82CFB /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				FDCE958C2298FDC000A82CFB /* Provider */,
+				FDCE95792298DCE300A82CFB /* LoginPresenter.swift */,
+				FDCE957A2298DCE300A82CFB /* LoginWorker.swift */,
+				FDCE957B2298DCE300A82CFB /* LoginRouter.swift */,
+				FDCE957C2298DCE300A82CFB /* LoginModels.swift */,
+				FDCE957D2298DCE300A82CFB /* LoginViewController.swift */,
+				FDCE957E2298DCE300A82CFB /* LoginInteractor.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		FDCE95852298E0A700A82CFB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FDCE95862298E0B400A82CFB /* Bundle.swift */,
+				FDCE958A2298E96400A82CFB /* Encodable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FDCE958C2298FDC000A82CFB /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				FDCE958D2298FE4B00A82CFB /* LoginProvider.swift */,
+			);
+			path = Provider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,8 +289,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDCE95452298D47F00A82CFB /* ViewController.swift in Sources */,
+				FDCE958E2298FE4B00A82CFB /* LoginProvider.swift in Sources */,
+				FDCE95892298E26B00A82CFB /* HttpVerb.swift in Sources */,
+				FDCE95832298DCE300A82CFB /* LoginViewController.swift in Sources */,
+				FDCE958B2298E96400A82CFB /* Encodable.swift in Sources */,
+				FDCE95762298DB4C00A82CFB /* ServiceProvider.swift in Sources */,
+				FDCE95822298DCE300A82CFB /* LoginModels.swift in Sources */,
+				FDCE95742298DB4400A82CFB /* RequestProvider.swift in Sources */,
 				FDCE95432298D47F00A82CFB /* AppDelegate.swift in Sources */,
+				FDCE95782298DB5500A82CFB /* DogErrors.swift in Sources */,
+				FDCE957F2298DCE300A82CFB /* LoginPresenter.swift in Sources */,
+				FDCE95812298DCE300A82CFB /* LoginRouter.swift in Sources */,
+				FDCE95872298E0B400A82CFB /* Bundle.swift in Sources */,
+				FDCE95842298DCE300A82CFB /* LoginInteractor.swift in Sources */,
+				FDCE95802298DCE300A82CFB /* LoginWorker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,13 +466,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LMS2232J28;
-				INFOPLIST_FILE = doglist/Info.plist;
+				HOST = "api-iddog.idwall.co";
+				INFOPLIST_FILE = "$(SRCROOT)/doglist/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = callidus.doglist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SCHEME = https;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -380,13 +486,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LMS2232J28;
-				INFOPLIST_FILE = doglist/Info.plist;
+				HOST = "api-iddog.idwall.co";
+				INFOPLIST_FILE = "$(SRCROOT)/doglist/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = callidus.doglist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SCHEME = https;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
