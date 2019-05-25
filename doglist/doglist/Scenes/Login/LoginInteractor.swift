@@ -13,16 +13,50 @@
 import UIKit
 
 protocol LoginBusinessLogic {
-
+  func validateEmail(_ text: String?)
 }
 
 protocol LoginDataStore {
-
 }
 
 class LoginInteractor: LoginBusinessLogic, LoginDataStore {
 
-  var presenter: LoginPresentationLogic?
-  var worker: LoginWorker?
+  var presenter: LoginPresentationLogic? {
+    didSet {
+      presenter?.presentTitle()
+      presenter?.presentSubtitle()
+      presenter?.presentButtonTitle()
+    }
+  }
+
+  let worker: LoginWorker
+
+  init(worker: LoginWorker = LoginWorker()) {
+    self.worker = worker
+  }
+
+  func validateEmail(_ text: String?) {
+    let regex: String = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
+    let isValid = NSPredicate(format: "SELF MATCHES %@", regex).evaluate(with: text)
+    if let text = text, isValid {
+      performLogin(text)
+    } else {
+      presenter?.presentInvalidEmailAlert()
+    }
+  }
+
+  func performLogin(_ validatedEmail: String) {
+    worker.performLogin(validatedEmail: validatedEmail)
+      .done(handleSuccess)
+      .catch(handleFailure)
+  }
+
+  func handleSuccess(_ response: Login.Response) {
+
+  }
+
+  func handleFailure(_ error: Error) {
+
+  }
   
 }

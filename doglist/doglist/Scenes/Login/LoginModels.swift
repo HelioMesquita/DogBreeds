@@ -19,9 +19,23 @@ enum Login {
   }
 
   struct Response: Decodable {
+    let user: User
   }
 
-  struct ViewModel {
+  struct User: Decodable {
+    let id: String
+    let email: String
+    let token: String
+    let createdAt: String
+    let updatedAt: String
+
+    enum CodingKeys: String, CodingKey {
+      case id = "_id"
+      case email
+      case token
+      case createdAt
+      case updatedAt
+    }
   }
 
 }

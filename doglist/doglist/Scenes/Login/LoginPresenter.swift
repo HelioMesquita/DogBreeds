@@ -13,11 +13,30 @@
 import UIKit
 
 protocol LoginPresentationLogic {
-
+  func presentTitle()
+  func presentSubtitle()
+  func presentInvalidEmailAlert()
+  func presentButtonTitle()
 }
 
 class LoginPresenter: LoginPresentationLogic {
 
   weak var viewController: LoginDisplayLogic?
+
+  func presentInvalidEmailAlert() {
+    viewController?.showInvalidEmailAlert(message: R.string.login.invalid_email())
+  }
+
+  func presentTitle() {
+    viewController?.showTitle(text: R.string.login.welcome())
+  }
+
+  func presentSubtitle() {
+    viewController?.showSubtitle(text: R.string.login.digit_your_email_to_continue())
+  }
+
+  func presentButtonTitle() {
+    viewController?.showButtonTitle(text: R.string.login.continue())
+  }
   
 }

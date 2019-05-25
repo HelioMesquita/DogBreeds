@@ -7,29 +7,30 @@
 //
 
 import Foundation
+import PromiseKit
 
-class ServiceProvider<T> where T: Decodable {
+class ServiceProvider {
 
-  typealias Model = T
 
-  func execute(request: RequestProvider, onSuccess: @escaping (Model) -> Void, onError: @escaping (Error) -> Void) {
-    URLSession.shared.dataTask(with: request.asURLRequest) { (data, response, _) in
+  func execute<T: Decodable>(request: RequestProvider, parser: T.Type) -> Promise<T> {
+    return Promise<T> { seal in
+      URLSession.shared.dataTask(with: request.asURLRequest) { (data, response, _) in
 
-      let statusCode = (response as? HTTPURLResponse)?.statusCode ?? 0
-      if 200...299 ~= statusCode {
-        let data = data ?? Data()
+        let statusCode = (response as? HTTPURLResponse)?.statusCode ?? 0
+        if 200...299 ~= statusCode {
+          let data = data ?? Data()
 
-        do {
-          let model = try JSONDecoder().decode(Model.self, from: data)
-          onSuccess(model)
-        } catch {
-          onError(error)
+          do {
+            let model = try JSONDecoder().decode(T.self, from: data)
+            seal.fulfill(model)
+          } catch {
+            seal.reject(error)
+          }
+
+        } else {
+          seal.reject(DogErrors.badRequest)
         }
-
-      } else {
-        onError(DogErrors.badRequest)
-      }
+      }.resume()
     }
   }
-
 }

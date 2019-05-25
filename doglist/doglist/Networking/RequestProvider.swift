@@ -13,7 +13,7 @@ protocol RequestProvider {
   var host: String { get }
   var path: String { get }
   var bodyParameters: Encodable? { get }
-  var queryParameters: [URLQueryItem] { get }
+  var queryParameters: [URLQueryItem]? { get }
   var headers: [String: String] { get }
   var httpVerb: HttpVerbs { get }
   var asURLRequest: URLRequest { get }
@@ -33,8 +33,8 @@ extension RequestProvider {
     return nil
   }
 
-  var queryParameters: [URLQueryItem] {
-    return []
+  var queryParameters: [URLQueryItem]? {
+    return nil
   }
 
   var headers: [String: String] {
@@ -56,6 +56,8 @@ extension RequestProvider {
       request.httpBody = data
     }
 
+    print(request)
+    print(String(bytes: request.httpBody!, encoding: .utf8))
     return request
   }
 

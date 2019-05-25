@@ -10,23 +10,22 @@
 //  see http://clean-swift.com
 //
 
+import PromiseKit
 import UIKit
 
 class LoginWorker {
 
-  let serviceProvider: ServiceProvider<Login.Response>
+  let serviceProvider: ServiceProvider
 
-  init(serviceProvider: ServiceProvider<Login.Response> = ServiceProvider<Login.Response>()) {
+  init(serviceProvider: ServiceProvider = ServiceProvider()) {
     self.serviceProvider = serviceProvider
   }
 
-  func performLogin(email: String) {
-    let emailEncodable = Login.BodyRequest(email: email)
-    serviceProvider.execute(request: LoginProvider(emailEncodable: emailEncodable), onSuccess: { response in
+  func performLogin(validatedEmail: String) -> Promise<Login.Response> {
+    let emailEncodable = Login.BodyRequest(email: validatedEmail)
+    let requestProvider = LoginProvider(emailEncodable: emailEncodable)
 
-    }, onError: { error in
-
-    })
+    return serviceProvider.execute(request: requestProvider, parser: Login.Response.self)
   }
   
 }

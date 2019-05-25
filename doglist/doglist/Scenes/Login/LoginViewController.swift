@@ -13,24 +13,22 @@
 import UIKit
 
 protocol LoginDisplayLogic: class {
-
+  func showInvalidEmailAlert(message: String)
+  func showTitle(text: String)
+  func showSubtitle(text: String)
+  func showButtonTitle(text: String)
 }
 
-class LoginViewController: UIViewController, LoginDisplayLogic {
+class LoginViewController: UIViewController {
+
+  @IBOutlet weak var lblTitle: UILabel!
+  @IBOutlet weak var lblSubtitle: UILabel!
+  @IBOutlet weak var txfEmail: UITextField!
+  @IBOutlet weak var bttOut: UIButton!
 
   var interactor: LoginBusinessLogic?
   var router: (LoginRoutingLogic & LoginDataPassing)?
   
-  override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-    super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    setup()
-  }
-  
-  required init?(coder aDecoder: NSCoder) {
-    super.init(coder: aDecoder)
-    setup()
-  }
-
   private func setup() {
     let viewController = self
     let interactor = LoginInteractor()
@@ -38,14 +36,40 @@ class LoginViewController: UIViewController, LoginDisplayLogic {
     let router = LoginRouter()
     viewController.interactor = interactor
     viewController.router = router
-    interactor.presenter = presenter
     presenter.viewController = viewController
+    interactor.presenter = presenter
     router.viewController = viewController
     router.dataStore = interactor
   }
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    bttOut.layer.cornerRadius = 24
+    setup()
+  }
+
+  @IBAction func continueButton(_ sender: Any) {
+    interactor?.validateEmail(txfEmail.text)
+  }
+
+}
+
+extension LoginViewController: LoginDisplayLogic {
+
+  func showButtonTitle(text: String) {
+    bttOut.setTitle(text, for: .normal)
+  }
+
+  func showInvalidEmailAlert(message: String) {
+
+  }
+
+  func showTitle(text: String) {
+    lblTitle.text = text
+  }
+
+  func showSubtitle(text: String) {
+    lblSubtitle.text = text
   }
 
 }
