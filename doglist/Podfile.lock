@@ -12,11 +12,15 @@ PODS:
   - R.swift (5.0.3):
     - R.swift.Library (~> 5.0.0)
   - R.swift.Library (5.0.1)
+  - SDWebImage (5.0.3):
+    - SDWebImage/Core (= 5.0.3)
+  - SDWebImage/Core (5.0.3)
 
 DEPENDENCIES:
   - IQKeyboardManagerSwift
   - PromiseKit
   - R.swift
+  - SDWebImage
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -24,13 +28,15 @@ SPEC REPOS:
     - PromiseKit
     - R.swift
     - R.swift.Library
+    - SDWebImage
 
 SPEC CHECKSUMS:
   IQKeyboardManagerSwift: a8228c257614af98743b4cd8584637025f36358f
   PromiseKit: ef376fb8b4e92edfeb66bd403b983eaa07fbde0c
   R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
   R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
+  SDWebImage: d4f87d7d36c8a4d9f9459dc282e0caa057fdf935
 
-PODFILE CHECKSUM: d85031de0298427b734bf15b7e9dac616abdcf98
+PODFILE CHECKSUM: a3df8d10a5164dc4cb82e4e7a52783b7e7c183e9
 
 COCOAPODS: 1.5.3

@@ -16,7 +16,9 @@ protocol LoginPresentationLogic {
   func presentTitle()
   func presentSubtitle()
   func presentInvalidEmailAlert()
+  func presentRequestFailureAlert()
   func presentButtonTitle()
+  func presentPhotoList()
 }
 
 class LoginPresenter: LoginPresentationLogic {
@@ -24,7 +26,7 @@ class LoginPresenter: LoginPresentationLogic {
   weak var viewController: LoginDisplayLogic?
 
   func presentInvalidEmailAlert() {
-    viewController?.showInvalidEmailAlert(message: R.string.login.invalid_email())
+    viewController?.showAlert(message: R.string.login.invalid_email())
   }
 
   func presentTitle() {
@@ -37,6 +39,14 @@ class LoginPresenter: LoginPresentationLogic {
 
   func presentButtonTitle() {
     viewController?.showButtonTitle(text: R.string.login.continue())
+  }
+
+  func presentRequestFailureAlert() {
+    viewController?.showAlert(message: R.string.login.request_failure())
+  }
+
+  func presentPhotoList() {
+    viewController?.showPhotoList()
   }
   
 }

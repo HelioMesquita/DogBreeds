@@ -13,10 +13,11 @@
 import UIKit
 
 protocol LoginDisplayLogic: class {
-  func showInvalidEmailAlert(message: String)
+  func showAlert(message: String)
   func showTitle(text: String)
   func showSubtitle(text: String)
   func showButtonTitle(text: String)
+  func showPhotoList()
 }
 
 class LoginViewController: UIViewController {
@@ -44,8 +45,8 @@ class LoginViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    bttOut.layer.cornerRadius = 24
     setup()
+    bttOut.layer.cornerRadius = 24
   }
 
   @IBAction func continueButton(_ sender: Any) {
@@ -60,7 +61,7 @@ extension LoginViewController: LoginDisplayLogic {
     bttOut.setTitle(text, for: .normal)
   }
 
-  func showInvalidEmailAlert(message: String) {
+  func showAlert(message: String) {
     let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
     let action = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
     alertController.addAction(action)
@@ -73,6 +74,10 @@ extension LoginViewController: LoginDisplayLogic {
 
   func showSubtitle(text: String) {
     lblSubtitle.text = text
+  }
+
+  func showPhotoList() {
+    router?.routeToPhotoList()
   }
 
 }

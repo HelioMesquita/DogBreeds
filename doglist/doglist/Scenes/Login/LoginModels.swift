@@ -38,4 +38,14 @@ enum Login {
     }
   }
 
+  class Session {
+
+    let token: String
+    var breed: DogBreedsList.Breeds = .husky
+
+    init(token: String) {
+      self.token = token
+    }
+  }
+
 }

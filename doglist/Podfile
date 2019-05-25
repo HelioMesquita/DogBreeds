@@ -9,6 +9,7 @@ target 'doglist' do
   pod "PromiseKit"
   pod 'R.swift'
   pod 'IQKeyboardManagerSwift'
+  pod 'SDWebImage'
 
   target 'doglistTests' do
     inherit! :search_paths

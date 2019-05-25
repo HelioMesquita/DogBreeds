@@ -16,6 +16,14 @@ struct R: Rswift.Validatable {
     try intern.validate()
   }
   
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
+  struct reuseIdentifier {
+    /// Reuse identifier `photoCell`.
+    static let photoCell: Rswift.ReuseIdentifier<DogCollectionViewCell> = Rswift.ReuseIdentifier(identifier: "photoCell")
+    
+    fileprivate init() {}
+  }
+  
   /// This `R.storyboard` struct is generated, and contains static references to 2 storyboards.
   struct storyboard {
     /// Storyboard `LaunchScreen`.
@@ -36,9 +44,22 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.string` struct is generated, and contains static references to 1 localization tables.
+  /// This `R.string` struct is generated, and contains static references to 2 localization tables.
   struct string {
-    /// This `R.string.login` struct is generated, and contains static references to 4 localization keys.
+    /// This `R.string.dogPhoto` struct is generated, and contains static references to 1 localization keys.
+    struct dogPhoto {
+      /// Value: Breed %@
+      static let title = Rswift.StringResource(key: "title", tableName: "DogPhoto", bundle: R.hostingBundle, locales: [], comment: nil)
+      
+      /// Value: Breed %@
+      static func title(_ value1: String) -> String {
+        return String(format: NSLocalizedString("title", tableName: "DogPhoto", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1)
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This `R.string.login` struct is generated, and contains static references to 5 localization keys.
     struct login {
       /// Value: Bem vindo!
       static let welcome = Rswift.StringResource(key: "welcome", tableName: "Login", bundle: R.hostingBundle, locales: [], comment: nil)
@@ -48,6 +69,8 @@ struct R: Rswift.Validatable {
       static let digit_your_email_to_continue = Rswift.StringResource(key: "digit_your_email_to_continue", tableName: "Login", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: E-mail inválido, insira um e-mail valido para continuar
       static let invalid_email = Rswift.StringResource(key: "invalid_email", tableName: "Login", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Ocorreu algum erro ao realizar a requisição, tente novamente
+      static let request_failure = Rswift.StringResource(key: "request_failure", tableName: "Login", bundle: R.hostingBundle, locales: [], comment: nil)
       
       /// Value: Bem vindo!
       static func welcome(_: Void = ()) -> String {
@@ -67,6 +90,11 @@ struct R: Rswift.Validatable {
       /// Value: E-mail inválido, insira um e-mail valido para continuar
       static func invalid_email(_: Void = ()) -> String {
         return NSLocalizedString("invalid_email", tableName: "Login", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Ocorreu algum erro ao realizar a requisição, tente novamente
+      static func request_failure(_: Void = ()) -> String {
+        return NSLocalizedString("request_failure", tableName: "Login", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}
@@ -117,11 +145,23 @@ struct _R: Rswift.Validatable {
       typealias InitialController = LoginViewController
       
       let bundle = R.hostingBundle
+      let login = StoryboardViewControllerResource<LoginViewController>(identifier: "login")
       let name = "Main"
+      let photoList = StoryboardViewControllerResource<DogPhotoListViewController>(identifier: "photoList")
+      
+      func login(_: Void = ()) -> LoginViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: login)
+      }
+      
+      func photoList(_: Void = ()) -> DogPhotoListViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: photoList)
+      }
       
       static func validate() throws {
         if #available(iOS 11.0, *) {
         }
+        if _R.storyboard.main().login() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'login' could not be loaded from storyboard 'Main' as 'LoginViewController'.") }
+        if _R.storyboard.main().photoList() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'photoList' could not be loaded from storyboard 'Main' as 'DogPhotoListViewController'.") }
       }
       
       fileprivate init() {}

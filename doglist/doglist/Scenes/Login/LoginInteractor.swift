@@ -17,10 +17,12 @@ protocol LoginBusinessLogic {
 }
 
 protocol LoginDataStore {
+  var session: Login.Session? { get set }
 }
 
 class LoginInteractor: LoginBusinessLogic, LoginDataStore {
 
+  var session: Login.Session?
   var presenter: LoginPresentationLogic? {
     didSet {
       presenter?.presentTitle()
@@ -52,11 +54,12 @@ class LoginInteractor: LoginBusinessLogic, LoginDataStore {
   }
 
   func handleSuccess(_ response: Login.Response) {
-
+    self.session = Login.Session(token: response.user.token)
+    presenter?.presentPhotoList()
   }
 
   func handleFailure(_ error: Error) {
-
+    presenter?.presentRequestFailureAlert()
   }
   
 }
