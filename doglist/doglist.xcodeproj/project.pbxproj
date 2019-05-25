@@ -420,7 +420,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/R.generated.swift",
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -614,6 +614,7 @@
 				DEVELOPMENT_TEAM = LMS2232J28;
 				HOST = "api-iddog.idwall.co";
 				INFOPLIST_FILE = "$(SRCROOT)/doglist/SupportingFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -635,6 +636,7 @@
 				DEVELOPMENT_TEAM = LMS2232J28;
 				HOST = "api-iddog.idwall.co";
 				INFOPLIST_FILE = "$(SRCROOT)/doglist/SupportingFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

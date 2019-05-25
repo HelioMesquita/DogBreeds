@@ -28,7 +28,7 @@ class LoginViewController: UIViewController {
 
   var interactor: LoginBusinessLogic?
   var router: (LoginRoutingLogic & LoginDataPassing)?
-  
+
   private func setup() {
     let viewController = self
     let interactor = LoginInteractor()
@@ -61,7 +61,10 @@ extension LoginViewController: LoginDisplayLogic {
   }
 
   func showInvalidEmailAlert(message: String) {
-
+    let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+    let action = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+    alertController.addAction(action)
+    present(alertController, animated: true, completion: nil)
   }
 
   func showTitle(text: String) {
