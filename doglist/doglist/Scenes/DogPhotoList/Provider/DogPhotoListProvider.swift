@@ -21,11 +21,6 @@ class DogPhotoListProvider: RequestProvider {
     return .GET
   }
 
-  init(session: Login.Session) {
-    self.breed = session.breed
-    self.token = session.token
-  }
-
   var queryParameters: [URLQueryItem]? {
     return [URLQueryItem(name: "category", value: breed.rawValue)]
   }
@@ -35,6 +30,11 @@ class DogPhotoListProvider: RequestProvider {
       "Content-Type": "application/json",
       "Authorization": token
     ]
+  }
+
+  init(session: Login.Session) {
+    self.breed = session.breed
+    self.token = session.token
   }
 
 }
