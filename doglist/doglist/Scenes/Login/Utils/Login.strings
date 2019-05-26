@@ -1,0 +1,14 @@
+/* 
+  Login.strings
+  doglist
+
+  Created by Hélio Mesquita on 25/05/19.
+  Copyright © 2019 Hélio Mesquita. All rights reserved.
+*/
+
+
+"welcome" = "Bem vindo!";
+"digit_your_email_to_continue" = "Digite o seu e-mail para continuar";
+"invalid_email" = "E-mail inválido, insira um e-mail valido para continuar";
+"continue" = "Continuar";
+"request_failure" = "Ocorreu algum erro ao realizar a requisição, tente novamente";

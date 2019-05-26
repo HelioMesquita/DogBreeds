@@ -1,0 +1,50 @@
+PODS:
+  - Cuckoo (1.0.4)
+  - IQKeyboardManagerSwift (6.3.0)
+  - Nimble (8.0.1)
+  - PromiseKit (6.7.1):
+    - PromiseKit/CorePromise (= 6.7.1)
+    - PromiseKit/Foundation (= 6.7.1)
+    - PromiseKit/UIKit (= 6.7.1)
+  - PromiseKit/CorePromise (6.7.1)
+  - PromiseKit/Foundation (6.7.1):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.7.1):
+    - PromiseKit/CorePromise
+  - R.swift (5.0.3):
+    - R.swift.Library (~> 5.0.0)
+  - R.swift.Library (5.0.1)
+  - SDWebImage (5.0.3):
+    - SDWebImage/Core (= 5.0.3)
+  - SDWebImage/Core (5.0.3)
+
+DEPENDENCIES:
+  - Cuckoo
+  - IQKeyboardManagerSwift
+  - Nimble
+  - PromiseKit
+  - R.swift
+  - SDWebImage
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Cuckoo
+    - IQKeyboardManagerSwift
+    - Nimble
+    - PromiseKit
+    - R.swift
+    - R.swift.Library
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  Cuckoo: 58e8219aa80f956350b6d3b396e9f1d6871544e7
+  IQKeyboardManagerSwift: a8228c257614af98743b4cd8584637025f36358f
+  Nimble: 45f786ae66faa9a709624227fae502db55a8bdd0
+  PromiseKit: ef376fb8b4e92edfeb66bd403b983eaa07fbde0c
+  R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
+  R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
+  SDWebImage: d4f87d7d36c8a4d9f9459dc282e0caa057fdf935
+
+PODFILE CHECKSUM: 6e3dd9666e801a18b9fc033e8cf2d60f939ef4a7
+
+COCOAPODS: 1.5.3
