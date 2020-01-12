@@ -1,17 +1,37 @@
-# dogwall
-A dog breed list app
+# Dog Breeds
+[![Swift 5.1](https://img.shields.io/badge/Swift-5.1-blue.svg?style=flat)](https://swift.org)
+[![Xcode 11.3](https://img.shields.io/badge/Xcode-11.3-blue.svg?style=flat)](https://developer.apple.com/xcode/)
+[![Cocoapods](https://img.shields.io/badge/cocoapods-compatible-brightgreen.svg?style=flat)](https://cocoapods.org)
+[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](https://github.com/HelioMesquita/DogBreeds/blob/master/LICENSE)
 
-# Setup
-Rodar o comando 'pod install' dentro da pasta do projeto através do terminal.
+A dog breed list app using clean architecture and unit test with cuckoo
 
-# Arquitetura
-A arquitetura utilizada foi a CLEAN, sendo assim como o template para criacao do projeto.
-A escolha desta arquitetura se deu porque a sua divisao de camadas permite o desenvolvimento de uma aplicacao altamente testavel.
+### Prerequisites
 
-# Dependencias
-- **PromiseKit:** Biblioteca que deixa de forma transparente a realizacao de funcoes assincronas. No caso foi utilizado para fazer a request.
-- **R.swift:** Biblioteca para indexa o projeto, criando o "R" semelhante ao android. Foi utilizada para o repositorio de strings no aplicativo
-- **IQKeyboardManagerSwift:** Biblioteca utilizada para gerenciar o teclado. Foi utilizado na tela de login 
-- **SDWebImage:** Biblioteca utilizada para fazer download e cache das imagens na collection view.
-- **Cuckoo:** Biblioteca que gera um arquivo na qual cria, de forma automatica, todos os mock das classes para serem testadas, nao havendo a necessidade de criar o spy.
-- **Nimble:** Biblioteca que deixa de uma forma mais verbosa a forma de realiar a assertividade do teste. Nao foi utilizado o Quick, pois o mesmo realiza somente o teste da classe toda, nao somente de um determinado tempo.
+* [Xcode](https://developer.apple.com/xcode/) 11.3
+* [Cocoapods](https://cocoapods.org) 1.8.4
+
+### Installing
+
+First of all download and install Xcode and Cocoapods, then clone the repository
+
+```
+https://github.com/HelioMesquita/DogBreeds.git
+```
+
+Go to cloned directory and execute
+
+```
+pod install
+```
+
+Open the directory project and touble tap on doglist.xcworkspace
+
+## Built With
+
+* [Nimble](https://github.com/Quick/Nimble) - A Matcher Framework for Swift and Objective-C
+* [SDWebImage](https://github.com/SDWebImage/SDWebImage) - Asynchronous image downloader with cache support as a UIImageView category
+* [PromiseKit](https://github.com/mxcl/PromiseKit) - Promises for Swift & ObjC.
+* [Cuckoo](https://github.com/Brightify/Cuckoo) - Boilerplate-free mocking framework for Swift!
+* [IQKeyboardManagerSwift](https://github.com/hackiftekhar/IQKeyboardManager) - Codeless drop-in universal library allows to prevent issues of keyboard sliding up and cover UITextField/UITextView. Neither need to write any code nor any setup required and much more.
+* [R.swift](https://github.com/mac-cain13/R.swift) - Get strong typed, autocompleted resources like images, fonts and segues in Swift projects

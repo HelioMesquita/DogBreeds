@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,7 +21,6 @@
 		FDB238502299B4B10080AB67 /* DogPhotoListProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB2384F2299B4B10080AB67 /* DogPhotoListProviderTests.swift */; };
 		FDB238532299B8380080AB67 /* DogErrorsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB238522299B8380080AB67 /* DogErrorsTest.swift */; };
 		FDB238552299B87E0080AB67 /* general.strings in Resources */ = {isa = PBXBuildFile; fileRef = FDB238542299B87E0080AB67 /* general.strings */; };
-		FDB23857229AF8FB0080AB67 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FDB23856229AF8FB0080AB67 /* README.md */; };
 		FDCE95432298D47F00A82CFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCE95422298D47F00A82CFB /* AppDelegate.swift */; };
 		FDCE95482298D47F00A82CFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDCE95462298D47F00A82CFB /* Main.storyboard */; };
 		FDCE954A2298D48100A82CFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDCE95492298D48100A82CFB /* Assets.xcassets */; };
@@ -54,6 +53,7 @@
 		FDCE95B322991C4400A82CFB /* DogBreedsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCE95AD22991C4400A82CFB /* DogBreedsListInteractor.swift */; };
 		FDCE95B5229924C400A82CFB /* DogPhoto.strings in Resources */ = {isa = PBXBuildFile; fileRef = FDCE95B4229924C400A82CFB /* DogPhoto.strings */; };
 		FDCE95B92299298200A82CFB /* DogCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCE95B82299298200A82CFB /* DogCollectionViewCell.swift */; };
+		FDDC167823CABE8F00970EF8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDC167723CABE8F00970EF8 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,7 +85,6 @@
 		FDB2384F2299B4B10080AB67 /* DogPhotoListProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogPhotoListProviderTests.swift; sourceTree = "<group>"; };
 		FDB238522299B8380080AB67 /* DogErrorsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogErrorsTest.swift; sourceTree = "<group>"; };
 		FDB238542299B87E0080AB67 /* general.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = general.strings; sourceTree = "<group>"; };
-		FDB23856229AF8FB0080AB67 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		FDCE953F2298D47F00A82CFB /* doglist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = doglist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCE95422298D47F00A82CFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDCE95472298D47F00A82CFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -122,6 +121,7 @@
 		FDCE95AD22991C4400A82CFB /* DogBreedsListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBreedsListInteractor.swift; sourceTree = "<group>"; };
 		FDCE95B4229924C400A82CFB /* DogPhoto.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = DogPhoto.strings; sourceTree = "<group>"; };
 		FDCE95B82299298200A82CFB /* DogCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogCollectionViewCell.swift; sourceTree = "<group>"; };
+		FDDC167723CABE8F00970EF8 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,7 +214,6 @@
 		FDCE95362298D47F00A82CFB = {
 			isa = PBXGroup;
 			children = (
-				FDB23856229AF8FB0080AB67 /* README.md */,
 				FDCE95412298D47F00A82CFB /* doglist */,
 				FDCE95562298D48100A82CFB /* doglistTests */,
 				FDCE95402298D47F00A82CFB /* Products */,
@@ -235,6 +234,7 @@
 		FDCE95412298D47F00A82CFB /* doglist */ = {
 			isa = PBXGroup;
 			children = (
+				FDDC167623CABE5900970EF8 /* Application */,
 				FDCE95642298D52D00A82CFB /* Scenes */,
 				FDCE95632298D52500A82CFB /* Networking */,
 				FDCE95652298D57000A82CFB /* Storyboard */,
@@ -261,7 +261,6 @@
 				FDCE95902299056B00A82CFB /* R.generated.swift */,
 				FDCE954E2298D48100A82CFB /* Info.plist */,
 				FDCE95492298D48100A82CFB /* Assets.xcassets */,
-				FDCE95422298D47F00A82CFB /* AppDelegate.swift */,
 				FDB238542299B87E0080AB67 /* general.strings */,
 			);
 			path = SupportingFiles;
@@ -389,6 +388,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		FDDC167623CABE5900970EF8 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				FDDC167723CABE8F00970EF8 /* main.swift */,
+				FDCE95422298D47F00A82CFB /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -479,7 +487,6 @@
 				FDCE954D2298D48100A82CFB /* LaunchScreen.storyboard in Resources */,
 				FDCE954A2298D48100A82CFB /* Assets.xcassets in Resources */,
 				FDCE95942299058C00A82CFB /* Login.strings in Resources */,
-				FDB23857229AF8FB0080AB67 /* README.md in Resources */,
 				FDB238552299B87E0080AB67 /* general.strings in Resources */,
 				FDCE95482298D47F00A82CFB /* Main.storyboard in Resources */,
 				FDCE95B5229924C400A82CFB /* DogPhoto.strings in Resources */,
@@ -502,26 +509,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-doglist/Pods-doglist-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
-				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-doglist/Pods-doglist-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-doglist/Pods-doglist-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-doglist/Pods-doglist-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-doglist/Pods-doglist-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C182A4D8055FE58D8F9A3018 /* [CP] Embed Pods Frameworks */ = {
@@ -530,22 +526,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-doglistTests/Pods-doglistTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Cuckoo/Cuckoo.framework",
-				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-doglistTests/Pods-doglistTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cuckoo.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-doglistTests/Pods-doglistTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-doglistTests/Pods-doglistTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-doglistTests/Pods-doglistTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D074AF31AD06031607831EBB /* [CP] Check Pods Manifest.lock */ = {
@@ -645,6 +634,7 @@
 				FDCE959F229916E300A82CFB /* DogPhotoListRouter.swift in Sources */,
 				FDCE958B2298E96400A82CFB /* Encodable.swift in Sources */,
 				FDCE95762298DB4C00A82CFB /* ServiceProvider.swift in Sources */,
+				FDDC167823CABE8F00970EF8 /* main.swift in Sources */,
 				FDCE95AE22991C4400A82CFB /* DogBreedsListPresenter.swift in Sources */,
 				FDCE95822298DCE300A82CFB /* LoginModels.swift in Sources */,
 				FDCE95742298DB4400A82CFB /* RequestProvider.swift in Sources */,
