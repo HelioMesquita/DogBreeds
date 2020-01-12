@@ -10,7 +10,6 @@
 		A8F0758D66E21090A861D60A /* Pods_doglistTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECE614C5DD21A6681E22818 /* Pods_doglistTests.framework */; };
 		DBAFE5BF75F0AAAE95C85696 /* Pods_doglist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C00A8BEB13C5A59A296A119 /* Pods_doglist.framework */; };
 		FD4348FA22992C9000AB6AEA /* DogPhotoListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4348F922992C9000AB6AEA /* DogPhotoListProvider.swift */; };
-		FD4348FD22998B9C00AB6AEA /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4348FC22998B9B00AB6AEA /* GeneratedMocks.swift */; };
 		FD43490322998C5500AB6AEA /* LoginInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD43490222998C5500AB6AEA /* LoginInteractorTests.swift */; };
 		FD43490722999A4600AB6AEA /* LoginPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD43490622999A4600AB6AEA /* LoginPresenterTests.swift */; };
 		FD4349092299A33400AB6AEA /* DogPhotoListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4349082299A33400AB6AEA /* DogPhotoListInteractorTests.swift */; };
@@ -54,6 +53,7 @@
 		FDCE95B5229924C400A82CFB /* DogPhoto.strings in Resources */ = {isa = PBXBuildFile; fileRef = FDCE95B4229924C400A82CFB /* DogPhoto.strings */; };
 		FDCE95B92299298200A82CFB /* DogCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCE95B82299298200A82CFB /* DogCollectionViewCell.swift */; };
 		FDDC167823CABE8F00970EF8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDC167723CABE8F00970EF8 /* main.swift */; };
+		FDDC167A23CAC11900970EF8 /* Cuckoo.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDC167923CAC11800970EF8 /* Cuckoo.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +74,6 @@
 		7C00A8BEB13C5A59A296A119 /* Pods_doglist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_doglist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA407A290790BCB5BA066759 /* Pods-doglist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-doglist.release.xcconfig"; path = "Pods/Target Support Files/Pods-doglist/Pods-doglist.release.xcconfig"; sourceTree = "<group>"; };
 		FD4348F922992C9000AB6AEA /* DogPhotoListProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogPhotoListProvider.swift; sourceTree = "<group>"; };
-		FD4348FC22998B9B00AB6AEA /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
 		FD43490222998C5500AB6AEA /* LoginInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractorTests.swift; sourceTree = "<group>"; };
 		FD43490622999A4600AB6AEA /* LoginPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTests.swift; sourceTree = "<group>"; };
 		FD4349082299A33400AB6AEA /* DogPhotoListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogPhotoListInteractorTests.swift; sourceTree = "<group>"; };
@@ -122,6 +121,7 @@
 		FDCE95B4229924C400A82CFB /* DogPhoto.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = DogPhoto.strings; sourceTree = "<group>"; };
 		FDCE95B82299298200A82CFB /* DogCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogCollectionViewCell.swift; sourceTree = "<group>"; };
 		FDDC167723CABE8F00970EF8 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		FDDC167923CAC11800970EF8 /* Cuckoo.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cuckoo.generated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,9 +247,9 @@
 		FDCE95562298D48100A82CFB /* doglistTests */ = {
 			isa = PBXGroup;
 			children = (
+				FDDC167923CAC11800970EF8 /* Cuckoo.generated.swift */,
 				FDB238512299B8290080AB67 /* Networking */,
 				FD4348FE22998BC900AB6AEA /* Scenes */,
-				FD4348FC22998B9B00AB6AEA /* GeneratedMocks.swift */,
 				FDCE95592298D48100A82CFB /* Info.plist */,
 			);
 			path = doglistTests;
@@ -597,7 +597,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/Scenes/Login/LoginPresenter.swift\" \\\n\"${INPUT_DIR}/Scenes/Login/LoginWorker.swift\" \\\n\"${INPUT_DIR}/Scenes/Login/LoginInteractor.swift\" \\\n\"${INPUT_DIR}/Scenes/Login/LoginViewController.swift\" \\\n\"${INPUT_DIR}/Scenes/DogPhotoList/DogPhotoListWorker.swift\" \\\n\"${INPUT_DIR}/Scenes/DogPhotoList/DogPhotoListPresenter.swift\" \\\n\"${INPUT_DIR}/Scenes/DogPhotoList/DogPhotoListInteractor.swift\" \\\n\"${INPUT_DIR}/Scenes/DogPhotoList/DogPhotoListViewController.swift\" \\\n\"${INPUT_DIR}/Scenes/DogBreedsList/DogBreedsListViewController.swift\" \\\n\"${INPUT_DIR}/Scenes/DogBreedsList/DogBreedsListPresenter.swift\" \\\n\"${INPUT_DIR}/Scenes/DogBreedsList/DogBreedsListInteractor.swift\"\n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
+			shellScript = "# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/Cuckoo.generated.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/Scenes/Login/LoginPresenter.swift\" \\\n\"${INPUT_DIR}/Scenes/Login/LoginWorker.swift\" \\\n\"${INPUT_DIR}/Scenes/Login/LoginInteractor.swift\" \\\n\"${INPUT_DIR}/Scenes/Login/LoginViewController.swift\" \\\n\"${INPUT_DIR}/Scenes/DogPhotoList/DogPhotoListWorker.swift\" \\\n\"${INPUT_DIR}/Scenes/DogPhotoList/DogPhotoListPresenter.swift\" \\\n\"${INPUT_DIR}/Scenes/DogPhotoList/DogPhotoListInteractor.swift\" \\\n\"${INPUT_DIR}/Scenes/DogPhotoList/DogPhotoListViewController.swift\" \\\n\"${INPUT_DIR}/Scenes/DogBreedsList/DogBreedsListViewController.swift\" \\\n\"${INPUT_DIR}/Scenes/DogBreedsList/DogBreedsListPresenter.swift\" \\\n\"${INPUT_DIR}/Scenes/DogBreedsList/DogBreedsListInteractor.swift\"\n# ... and so forth, the last line should never end with a backslash\n\n";
 		};
 		FDCE958F229904C000A82CFB /* R SWIFT */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -664,6 +664,7 @@
 			files = (
 				FDB238502299B4B10080AB67 /* DogPhotoListProviderTests.swift in Sources */,
 				FDB238532299B8380080AB67 /* DogErrorsTest.swift in Sources */,
+				FDDC167A23CAC11900970EF8 /* Cuckoo.generated.swift in Sources */,
 				FD43490D2299AF6500AB6AEA /* DogBreedListInteractorTests.swift in Sources */,
 				FD43490F2299AF7C00AB6AEA /* DogBreedListPresenterTests.swift in Sources */,
 				FDB2384E2299B39F0080AB67 /* LoginProviderTests.swift in Sources */,
@@ -671,7 +672,6 @@
 				FD43490B2299A36400AB6AEA /* DogPhotoListPresenterTests.swift in Sources */,
 				FD43490322998C5500AB6AEA /* LoginInteractorTests.swift in Sources */,
 				FD4349092299A33400AB6AEA /* DogPhotoListInteractorTests.swift in Sources */,
-				FD4348FD22998B9C00AB6AEA /* GeneratedMocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
